@@ -1,0 +1,46 @@
+
+{% extends "base.html"%}
+
+{% load static %}
+
+{% block content %}
+
+   
+      <!-- contact -->
+    <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+     <div class="contact">
+         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                     <div class="titlepage text_align_left">
+                        <h2>More Details Are..</h2>
+                     </div>
+                 
+            </div>
+            <div class="coronata">
+                <div class="container">
+                   <div class="row d_flex grid">
+                      <div class="col-md-7">
+                         <div class="coronata_img text_align_center">
+                            <figure><img src="{{mov.img.url}}" alt="#" /></figure>
+                         </div>
+                      </div>
+                      <div class="col-md-5 oder1">
+                         <div class="titlepage text_align_left">
+                            <h2>{{mov.name}}</h2>
+                            <h3>Director : {{mov.director}}</h3>
+                            <h3>{{mov.screen}}
+                            </h3>
+                            <a class="read_more" href="">Book Now</a>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+         </div>
+      </div>
+      <!-- end contact -->
+      <!--  footer -->
+      {% endblock  %}

@@ -1,0 +1,53 @@
+
+{% extends "base.html"%}
+
+{% load static %}
+
+{% block content %}
+
+   
+      <!-- contact -->
+   
+     <div class="contact">
+         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                     <div class="titlepage text_align_left">
+                        <h2>Movie Details please..</h2>
+                     </div>
+                  </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <form action="/contact1" method="post" enctype="multipart/form-data">
+                     {% csrf_token %}
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contactus"  type="type" placeholder="Movie name" name="name" style="padding: 10px;" > 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus"  type="type" placeholder="Director"  name="director" style="padding: 10px;">                          
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus"  type="type" placeholder="Screen" name="screen" style="padding: 10px;"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input type="file"  name="img" accept="image/*" required  class="form-control"  class="contactus">
+                        </div>
+                        <div class="col-md-12">
+                           <button  class="read_more">Submit</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+                <div class="col-md-6">
+                  <div class="map-responsive">
+                     <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="400" height="300" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end contact -->
+      <!--  footer -->
+      {% endblock  %}

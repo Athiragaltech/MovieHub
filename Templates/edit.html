@@ -1,0 +1,99 @@
+
+{% extends "base.html"%}
+
+{% load static %}
+
+{% block content %}
+
+   
+      <!-- contact -->
+   
+     <div class="contact">
+         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                     <div class="titlepage text_align_left">
+                        <h2>Updation is possibile here</h2>
+                     </div>
+                  </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <form action="/update/{{data.id}}" method="post" enctype="multipart/form-data">
+                     {% csrf_token %}
+                     
+                     <div class="d-flex justify-content-center align-items-center" >
+   
+                        <table>
+                        <tr>
+                            <td>
+                               <label style="font-size: x-large; color: blue;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Name</label> 
+                            </td>
+                            <td>
+                                <input type="text" name="name" value={{data.name}}  class="form-control">
+                            </td>
+                        </tr>
+                    <tr>
+                        <td>
+                            <label style="font-size: x-large; color: blue;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Director </label> 
+                        </td>
+                        <td>
+                            <input type="text" name="director" value={{data.director}}  class="form-control">
+                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label style="font-size: x-large; color: blue;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Screen</label> 
+                         </td>
+                         <td>
+                             <input type="text" name="screen" value={{data.screen}}  class="form-control">
+                         </td>
+                    </tr>
+                   
+                   <tr>
+                    <td>
+                       
+                    </td>
+                    <td>
+                        <img src="{{data.img.url}}" alt="" height="250" width="250" >  
+                    </td>
+                   </tr>
+                      <tr>
+                        <td>
+                            <label style="font-size: x-large; color: blue;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">   Image  
+                        </td>
+                        <td>
+                            <input type="file"  name="img" accept="image/*" required style="margin-left: 5px;  margin-bottom: 10px;"  class="form-control">
+                        </td>
+                      </tr>
+                   <tr>
+                    <td>
+
+                    </td>
+                    <td>
+                        <input type="submit" value="Submit"  class="btn btn-warning">
+                    </td>
+                   </tr>
+                  
+                    </table>
+                </div>
+                
+
+
+
+
+
+            </form>
+         </div>
+          <!-- <div class="col-md-6">
+            <div class="map-responsive">
+               <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="400" height="300" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+            </div>
+         </div> -->
+      </div>
+   </div>
+</div>
+<!-- end contact -->
+<!--  footer -->
+{% endblock  %}
